@@ -73,6 +73,18 @@
     .step h3 { font-size: 1.1rem; margin: 0 0 6px; }
     .step p { margin: 0; color: #b9c9df; line-height: 1.5; font-size: .92rem; }
 
+    /* Ejemplos */
+    .examples { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .example { display: flex; flex-direction: column; overflow: hidden; border: 1px solid #30435e; border-radius: 24px; background: rgba(18, 30, 53, .92); color: #edf4ff; text-decoration: none; transition: border-color .2s, background-color .2s, transform .2s; }
+    .example:hover, .example:focus-visible { border-color: #4ce0d1; background: #1a3650; transform: translateY(-2px); }
+    .example-shot { aspect-ratio: 16 / 9; border-bottom: 1px solid #30435e; background: #0d1830; }
+    .example-shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .example-body { display: flex; flex-direction: column; flex: 1; padding: 22px 24px 24px; }
+    .example h3 { font-size: 1.3rem; margin: 0 0 6px; }
+    .example p { margin: 0 0 16px; color: #b9c9df; line-height: 1.55; font-size: .95rem; }
+    .example .visit { margin-top: auto; color: #4ce0d1; font-weight: 800; font-size: .92rem; }
+    @media (max-width: 720px) { .examples { grid-template-columns: 1fr; } }
+
     /* Condiciones */
     .terms { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; border: 1px solid #415875; border-radius: 24px; padding: clamp(22px, 4vw, 34px); background: linear-gradient(120deg, rgba(76, 224, 209, .10), rgba(91, 107, 255, .10)), rgba(18, 30, 53, .92); }
     .terms .icon { margin: 0; width: 56px; height: 56px; border-radius: 16px; }
@@ -93,7 +105,7 @@
     @media (max-width: 900px) { .features, .steps { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 720px) { .layout, .contact-layout { grid-template-columns: 1fr; } h2.hero { max-width: 12ch; } }
     @media (max-width: 480px) { .features, .steps { grid-template-columns: 1fr; } .terms { grid-template-columns: 1fr; } }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .contact-link, .button { transition: none; } .contact-link:hover, .contact-link:focus-visible, .button:hover, .button:focus-visible { transform: none; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .contact-link, .button, .example { transition: none; } .contact-link:hover, .contact-link:focus-visible, .button:hover, .button:focus-visible, .example:hover, .example:focus-visible { transform: none; } }
   </style>
 </head>
 <body>
@@ -215,6 +227,32 @@
             <p>En internet con tu dominio, lista para compartir.</p>
           </li>
         </ol>
+      </section>
+
+      <!-- Ejemplos -->
+      <section class="section" aria-labelledby="ejemplos-title">
+        <div class="section-head">
+          <p class="eyebrow">Ejemplos</p>
+          <h2 id="ejemplos-title">Webs que <span>he creado.</span></h2>
+        </div>
+        <div class="examples">
+          <a class="example" href="https://www.hora-fit.es" target="_blank" rel="noopener">
+            <div class="example-shot"><img src="img/ejemplo-horafit.jpg" alt="Portada de la web de HoraFit" loading="lazy" width="1000" height="562"></div>
+            <div class="example-body">
+              <h3>HoraFit</h3>
+              <p>Clases de fitness en grupo en el propio colegio, para madres y padres.</p>
+              <span class="visit">www.hora-fit.es →</span>
+            </div>
+          </a>
+          <a class="example" href="https://www.kalokai.es" target="_blank" rel="noopener">
+            <div class="example-shot"><img src="img/ejemplo-kalokai.jpg" alt="Portada de la web de Kalokai" loading="lazy" width="1000" height="562"></div>
+            <div class="example-body">
+              <h3>Kalokai</h3>
+              <p>Bienestar laboral y formación para empresas.</p>
+              <span class="visit">www.kalokai.es →</span>
+            </div>
+          </a>
+        </div>
       </section>
 
       <!-- Condiciones -->
