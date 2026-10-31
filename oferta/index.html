@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tu web profesional por 200 €: marca, logo y página web publicada con tu dominio. Para psicólogos, nutricionistas, fisioterapeutas, peluquerías, entrenadores, otros autónomos y pymes.">
+  <meta name="color-scheme" content="dark">
+  <title>Tu web profesional por 200 € | Esteban Calvo</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #080f20; color: #edf4ff; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { min-height: 100vh; margin: 0; background: radial-gradient(circle at 82% 6%, rgba(51, 215, 202, .17), transparent 28%), radial-gradient(circle at 12% 40%, rgba(91, 107, 255, .18), transparent 35%), radial-gradient(circle at 88% 85%, rgba(91, 107, 255, .12), transparent 30%), #080f20; }
+    main { padding: clamp(24px, 6vw, 80px) clamp(16px, 6vw, 80px); }
+    .wrap { width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .container { width: min(100%, 1020px); }
+
+    /* Cabecera */
+    .top-banner { text-align: center; margin-bottom: clamp(28px, 5vw, 48px); }
+    .top-banner h1 { font-size: clamp(3.2rem, 8vw, 6.5rem); line-height: 1; letter-spacing: .02em; margin: 0; font-weight: 900; color: #edf4ff; }
+    .top-banner h1 span { color: #4ce0d1; }
+
+    /* Hero */
+    .layout { width: min(100%, 1020px); display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(28px, 6vw, 80px); align-items: center; }
+    .eyebrow { color: #4ce0d1; font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; margin: 0; }
+    h2.hero { font-size: clamp(2.8rem, 6vw, 5.5rem); line-height: 1.04; letter-spacing: -.065em; margin: 20px 0 24px; }
+    h2.hero span { color: #4ce0d1; }
+    .intro { max-width: 54ch; color: #b9c9df; line-height: 1.75; font-size: 1.08rem; margin: 0; }
+    .intro strong { color: #edf4ff; }
+
+    .card { border: 1px solid #30435e; border-radius: 24px; padding: clamp(24px, 4vw, 40px); background: rgba(18, 30, 53, .92); box-shadow: 0 24px 75px rgba(0,0,0,.22); }
+    h2.card-title { font-size: 1.5rem; margin: 0 0 12px; }
+    .card p { color: #b9c9df; line-height: 1.6; margin: 0 0 26px; }
+
+    /* Tarjeta de precio */
+    .price-card { text-align: center; }
+    .price-card .eyebrow { margin-bottom: 14px; }
+    .price { font-size: clamp(4rem, 9vw, 5.6rem); font-weight: 900; line-height: 1; letter-spacing: -.05em; color: #edf4ff; }
+    .price span { color: #4ce0d1; }
+    .price-sub { display: inline-block; margin: 16px 0 22px; padding: 6px 14px; border: 1px solid #415875; border-radius: 999px; color: #b9c9df; font-size: .9rem; font-weight: 600; }
+    .price-card p { margin-bottom: 8px; }
+
+    .button { display: block; padding: 16px 18px; border-radius: 12px; margin-top: 14px; font-weight: 800; text-align: center; text-decoration: none; transition: border-color .2s, background-color .2s, transform .2s; }
+    .button.primary { background: #4ce0d1; color: #080f20; border: 1px solid #4ce0d1; }
+    .button.primary:hover, .button.primary:focus-visible { background: #7beadf; transform: translateY(-2px); }
+    .button.ghost { border: 1px solid #415875; color: #ecf7ff; }
+    .button.ghost:hover, .button.ghost:focus-visible { border-color: #4ce0d1; background: #1a3650; transform: translateY(-2px); }
+
+    /* Secciones */
+    .section { width: min(100%, 1020px); margin-top: clamp(64px, 10vw, 112px); }
+    .section-head { margin-bottom: 28px; }
+    .section-head h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); line-height: 1.08; letter-spacing: -.05em; margin: 14px 0 0; }
+    .section-head h2 span { color: #4ce0d1; }
+    .section-head p { color: #b9c9df; line-height: 1.7; margin: 14px 0 0; max-width: 60ch; }
+
+    /* Para quién */
+    .chips { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .chips li { padding: 12px 20px; border: 1px solid #30435e; border-radius: 999px; background: rgba(18, 30, 53, .92); font-weight: 700; }
+    .chips li.more { border-style: dashed; color: #b9c9df; font-weight: 600; }
+
+    /* Qué incluye */
+    .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .feature { border: 1px solid #30435e; border-radius: 18px; padding: 22px; background: rgba(18, 30, 53, .92); }
+    .icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; background: rgba(76, 224, 209, .12); color: #4ce0d1; margin-bottom: 18px; }
+    .icon svg { width: 22px; height: 22px; }
+    .feature h3 { font-size: 1.05rem; margin: 0 0 6px; }
+    .feature p { margin: 0; color: #b9c9df; line-height: 1.5; font-size: .92rem; }
+
+    /* Cómo funciona */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none; counter-reset: step; }
+    .step { position: relative; border: 1px solid #30435e; border-radius: 18px; padding: 24px 22px; background: rgba(18, 30, 53, .92); }
+    .step-num { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: #4ce0d1; color: #080f20; font-weight: 900; margin-bottom: 18px; }
+    .step h3 { font-size: 1.1rem; margin: 0 0 6px; }
+    .step p { margin: 0; color: #b9c9df; line-height: 1.5; font-size: .92rem; }
+
+    /* Ejemplos */
+    .examples { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .example { display: flex; flex-direction: column; overflow: hidden; border: 1px solid #30435e; border-radius: 24px; background: rgba(18, 30, 53, .92); color: #edf4ff; text-decoration: none; transition: border-color .2s, background-color .2s, transform .2s; }
+    .example:hover, .example:focus-visible { border-color: #4ce0d1; background: #1a3650; transform: translateY(-2px); }
+    .example-shot { aspect-ratio: 16 / 9; border-bottom: 1px solid #30435e; background: #0d1830; }
+    .example-shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .example-body { display: flex; flex-direction: column; flex: 1; padding: 22px 24px 24px; }
+    .example h3 { font-size: 1.3rem; margin: 0 0 6px; }
+    .example p { margin: 0 0 16px; color: #b9c9df; line-height: 1.55; font-size: .95rem; }
+    .example .visit { margin-top: auto; color: #4ce0d1; font-weight: 800; font-size: .92rem; }
+    @media (max-width: 900px) { .examples { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .examples { grid-template-columns: 1fr; } }
+
+    /* Condiciones */
+    .terms { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; border: 1px solid #415875; border-radius: 24px; padding: clamp(22px, 4vw, 34px); background: linear-gradient(120deg, rgba(76, 224, 209, .10), rgba(91, 107, 255, .10)), rgba(18, 30, 53, .92); }
+    .terms .icon { margin: 0; width: 56px; height: 56px; border-radius: 16px; }
+    .terms .icon svg { width: 28px; height: 28px; }
+    .terms h3 { margin: 0 0 8px; font-size: 1.25rem; }
+    .terms p { margin: 0; color: #b9c9df; line-height: 1.65; }
+    .terms p strong { color: #4ce0d1; }
+
+    /* Contacto */
+    .contact-layout { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(28px, 6vw, 80px); align-items: center; }
+    .contact-link { display: block; padding: 16px 18px; border: 1px solid #415875; border-radius: 12px; margin-top: 14px; color: #ecf7ff; text-decoration: none; overflow-wrap: anywhere; transition: border-color .2s, background-color .2s, transform .2s; }
+    .contact-link small { display: block; color: #4ce0d1; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 6px; }
+    .contact-link:hover, .contact-link:focus-visible { border-color: #4ce0d1; background: #1a3650; transform: translateY(-2px); }
+
+    a:focus-visible { outline: 3px solid #4ce0d1; outline-offset: 4px; }
+    .site-footer { margin-top: clamp(48px, 8vw, 80px); color: #4a5b76; font-size: .78rem; letter-spacing: .08em; text-align: center; }
+
+    @media (max-width: 900px) { .features, .steps { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 720px) { .layout, .contact-layout { grid-template-columns: 1fr; } h2.hero { max-width: 12ch; } }
+    @media (max-width: 480px) { .features, .steps { grid-template-columns: 1fr; } .terms { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .contact-link, .button, .example { transition: none; } .contact-link:hover, .contact-link:focus-visible, .button:hover, .button:focus-visible, .example:hover, .example:focus-visible { transform: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="wrap">
+      <div class="top-banner">
+        <h1>TU WEB <span>POR MUY POCO</span></h1>
+      </div>
+
+      <!-- Hero + precio -->
+      <div class="layout">
+        <div>
+          <p class="eyebrow">Webs para autónomos y pymes · Todo incluido</p>
+          <h2 class="hero">Tu web profesional,<span> hecha por mí.</span></h2>
+          <p class="intro">Tú me cuentas tu negocio; yo creo <strong>tu marca, tu logo y tu página web</strong>, y te la entrego <strong>publicada y lista para compartir</strong>.</p>
+        </div>
+        <section class="card price-card" aria-labelledby="price-title">
+          <p class="eyebrow" id="price-title">Todo incluido</p>
+          <div class="price">200<span> €</span></div>
+          <div class="price-sub">1.er año incluido</div>
+          <p>Marca, logo, web publicada con tu dominio y mantenimiento el primer año.</p>
+          <a class="button primary" href="https://wa.me/34711229286" target="_blank" rel="noopener">Pide la tuya por WhatsApp</a>
+          <a class="button ghost" href="#incluye">Ver qué incluye</a>
+        </section>
+      </div>
+
+      <!-- Para quién -->
+      <section class="section" aria-labelledby="para-quien">
+        <div class="section-head">
+          <p class="eyebrow">Para quién</p>
+          <h2 id="para-quien">Pensada para <span>autónomos y pymes.</span></h2>
+        </div>
+        <ul class="chips">
+          <li>Psicología</li>
+          <li>Nutrición</li>
+          <li>Fisioterapia</li>
+          <li>Peluquería</li>
+          <li>Entrenamiento</li>
+          <li>Pymes</li>
+          <li class="more">y otros autónomos y negocios</li>
+        </ul>
+      </section>
+
+      <!-- Qué incluye -->
+      <section class="section" id="incluye" aria-labelledby="incluye-title">
+        <div class="section-head">
+          <p class="eyebrow">Todo incluido</p>
+          <h2 id="incluye-title">Qué incluyen <span>los 200 €.</span></h2>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.7-.8 1.7-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.8-1.7 1.7-1.7h2c3.1 0 5.6-2.5 5.6-5.6C22 6 17.5 2 12 2z"/></svg></div>
+            <h3>Identidad de marca</h3>
+            <p>Mensaje, colores y tipografías.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.8L12 16.4l-5.2 2.8 1-5.8L3.5 9.2l5.9-.9z"/></svg></div>
+            <h3>Logo propio</h3>
+            <p>Original, para web y redes.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <h3>Web publicada</h3>
+            <p>Con tu propio dominio.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+            <h3>Perfecta en el móvil</h3>
+            <p>Donde te buscan tus clientes.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg></div>
+            <h3>WhatsApp en un clic</h3>
+            <p>Botón directo a tu chat.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+            <h3>Email y teléfono</h3>
+            <p>Te contactan al pulsar.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+            <h3>Lista para Google</h3>
+            <p>Para que te encuentren.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></div>
+            <h3>Aviso legal</h3>
+            <p>Textos básicos incluidos.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Cómo funciona -->
+      <section class="section" aria-labelledby="como-title">
+        <div class="section-head">
+          <p class="eyebrow">Paso a paso</p>
+          <h2 id="como-title">Cómo <span>funciona.</span></h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3>Me cuentas</h3>
+            <p>Tu negocio, servicios, fotos y datos de contacto.</p>
+          </li>
+          <li class="step">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3>Diseño</h3>
+            <p>Tu marca, tu logo y una primera versión de la web.</p>
+          </li>
+          <li class="step">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3>La revisas</h3>
+            <p>Me pides cambios y la ajusto contigo.</p>
+          </li>
+          <li class="step">
+            <div class="step-num" aria-hidden="true">4</div>
+            <h3>¡Publicada!</h3>
+            <p>En internet con tu dominio, lista para compartir.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Ejemplos -->
+      <section class="section" aria-labelledby="ejemplos-title">
+        <div class="section-head">
+          <p class="eyebrow">Ejemplos</p>
+          <h2 id="ejemplos-title">Webs que <span>he creado.</span></h2>
+        </div>
+        <div class="examples">
+          <a class="example" href="https://www.hora-fit.es" target="_blank" rel="noopener">
+            <div class="example-shot"><img src="../img/ejemplo-horafit.jpg" alt="Portada de la web de HoraFit" loading="lazy" width="1000" height="562"></div>
+            <div class="example-body">
+              <h3>HoraFit</h3>
+              <p>Clases de fitness en grupo en el propio colegio, para madres y padres.</p>
+              <span class="visit">Ver web →</span>
+            </div>
+          </a>
+          <a class="example" href="https://www.kalokai.es" target="_blank" rel="noopener">
+            <div class="example-shot"><img src="../img/ejemplo-kalokai.jpg" alt="Portada de la web de Kalokai" loading="lazy" width="1000" height="562"></div>
+            <div class="example-body">
+              <h3>Kalokai</h3>
+              <p>Bienestar laboral y formación para empresas.</p>
+              <span class="visit">Ver web →</span>
+            </div>
+          </a>
+          <a class="example" href="https://estebancalvobayarri.github.io/Comensanas2/" target="_blank" rel="noopener">
+            <div class="example-shot"><img src="../img/ejemplo-comensanas.jpg" alt="Portada de la web de Comensanas" loading="lazy" width="1000" height="562"></div>
+            <div class="example-body">
+              <h3>Comensanas</h3>
+              <p>Web de una dietista en Valencia y Llíria: consulta y planes de alimentación.</p>
+              <span class="visit">Ver web →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Condiciones -->
+      <section class="section" aria-labelledby="terms-title">
+        <div class="terms">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div>
+            <h3 id="terms-title">Dominio y mantenimiento incluidos el primer año.</h3>
+            <p>A partir del segundo año, <strong>solo 50 € al año</strong>. ¿Quieres también un email con tu dominio (tu@tunombre.es)? Lo valoro aparte.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section class="section" id="contacto" aria-labelledby="contact-title">
+        <div class="contact-layout">
+          <div class="section-head">
+            <p class="eyebrow">Diseño web · Contacto</p>
+            <h2>Pide <span>la tuya.</span></h2>
+            <p>Escríbeme y te cuento los siguientes pasos, por WhatsApp o por correo.</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title" id="contact-title">Hablemos de tu proyecto</h2>
+            <a class="contact-link" href="https://wa.me/34711229286" target="_blank" rel="noopener"><small>Whatsapp</small>711 229 286</a>
+            <a class="contact-link" href="mailto:estebancalvobayarri@gmail.com"><small>Correo electrónico</small>estebancalvobayarri@gmail.com</a>
+          </div>
+        </div>
+      </section>
+
+      <p class="site-footer">- ESTEBAN CALVO -</p>
+    </div>
+  </main>
+</body>
+</html>
