@@ -102,6 +102,9 @@
 
     a:focus-visible { outline: 3px solid #4ce0d1; outline-offset: 4px; }
     .site-footer { margin-top: clamp(48px, 8vw, 80px); color: #4a5b76; font-size: .78rem; letter-spacing: .08em; text-align: center; }
+    .site-credit { display: block; width: max-content; margin: 14px auto 0; transition: filter .2s ease; }
+    .site-credit img { display: block; height: 13.5px; width: auto; }
+    .site-credit:hover { filter: brightness(1.45); }
 
     @media (max-width: 900px) { .features, .steps { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 720px) { .layout, .contact-layout { grid-template-columns: 1fr; } h2.hero { max-width: 12ch; } }
@@ -292,6 +295,7 @@
       </section>
 
       <p class="site-footer">- ESTEBAN CALVO -</p>
+      <a class="site-credit" href="https://ecwebdesign.es" target="_blank" rel="noopener" aria-label="Diseño y web: EC Web Design"><img src="img/credito-diseno-web.png" width="405" height="52" alt=""></a>
     </div>
   </main>
 </body>
